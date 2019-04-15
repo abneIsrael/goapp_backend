@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste de Socket realtime</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script>
+        var socket = io('http://localhost:3000'); // realiza conexao com a nossa aplicacao
+
+        // ouve evento tweet
+        socket.on('tweet', function(data) {
+            console.log(data)
+        });
+
+        // ouve evento like
+        socket.on('like', function(data) {
+            console.log(data)
+        });
+    </script>
+</body>
+</html>
