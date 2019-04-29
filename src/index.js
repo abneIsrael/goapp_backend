@@ -13,7 +13,7 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server); // io guardara os dados dos usuarios conectados a aplicacao
 
 
-mongoose.connect("mongodb://abn_webbox:ASZXq1w2@ds037067.mlab.com:37067/goweek-webbox", {
+mongoose.connect("mongodb://<userlogin>:<password>@ds037067.mlab.com:37067/goweek-webbox", {
     useNewUrlParser: true
 }); //estabelece conexao com MongoBD
 
